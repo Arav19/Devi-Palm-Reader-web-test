@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devi Palm Reader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="header">
+      <h1>Devi Palm Reader</h1>
+      <p class="subtitle">A sacred reading — your palm reveals the stars</p>
+    </div>
+    <div class="stage frame">
+      <div class="ornament top-left"></div>
+      <div class="ornament top-right"></div>
+  <video id="video" autoplay playsinline muted></video>
+  <canvas id="preview"></canvas>
+  <canvas id="glow"></canvas>
+  <canvas id="scan"></canvas>
+      <canvas id="particles"></canvas>
+      <div class="frame-decor"></div>
+    </div>
+
+    <div class="controls">
+      <div class="control-row">
+        <button id="capture">Capture Palm</button>
+        <button id="toggleCam">Stop Camera</button>
+        <label class="upload">
+          <input id="upload" type="file" accept="image/*">
+          <span>Upload Photo</span>
+        </label>
+      </div>
+      <div class="control-row">
+        <label class="device-select">Camera:
+          <select id="cameraSelect"></select>
+        </label>
+        <button id="swapCam">Swap</button>
+        <div id="status">Ready</div>
+      </div>
+    </div>
+
+    <p class="note">Aim the camera at your palm with a plain background for best results.</p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
